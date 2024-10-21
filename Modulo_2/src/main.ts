@@ -1,4 +1,3 @@
-import "./style.css";
 
 console.log({
     Cena_total : "120€" , 
