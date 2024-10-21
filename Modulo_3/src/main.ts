@@ -1,73 +1,49 @@
-import "./style.css";
+/*Grupos musicales
+Queremos mostrar información acerca de grupos musicales.
 
-const estiloTitulo = "color:red; font-size:18px";
-const preparcionREceta = "font-family:italic";
+Si estás trabajando con TypeScript habría que crear un interfaz para representar a un grupo musical.
 
-const alubias = "🫘 alubias";
-const aguacate = "🥑 aguacate";
-const huevo = "🥚 huevo";
-const cebolla = "🧅 cebolla";
-const tomate = "🍅 tomate";
-const lechuga = "🥬 cebolla";
+La información de los grupos que queremos mostrar:
 
-// Ensalada de alubias con aguacate y huevo
-console.log("%cEnsalada de alubias con aguacate y huevo", 
-estiloTitulo);
+Nombre del grupo / cantante / compositor (string).
+Año de fundación: cuando se formó el grupo (numero).
+Si está en activo (booleano).
+Género musical (string).
+Cada género queremos tenerlo en una variable.
 
-// Ingredientes
-console.log(
-`- Ingredientes: ${alubias}, ${aguacate}, ${huevo}, ${cebolla}, ${tomate}, ${lechuga}.`
-);
-// Preparación
-console.log(
-"%c- Preparación: cocer las alubias y dejar enfriar. Mezclar con aguacate en cubos, huevo cocido en rodajas, cebolla en juliana, tomate en cubos y lechuga troceada. Aliñar con aceite de oliva y vinagre.",
-preparcionREceta
-);
+Los grupos que vamos a mostrar:
 
-// Ensalada de setas y bacon
-console.log("%cEnsalada de setas y bacon", estiloTitulo);
+The Beatles / 1960 / Activo: true / 🎵 Pop Rock
+Queen / 1970 / Activo: false / 🎸 Rock
+AC DC / 1973 / Activo: true / 🤘 Hard Rock
+Ludwig van Beethoven / 1770 / Activo: false / 🎼 Clásica
+The Rolling Stones / 1962 / Activo: true / 🎸 Rock
+Queremos mostrar cada grupo por consola, el nombre del grupo de música queremos ponerlo en negrita, con fuente más grande y color de fondo verde.*/
 
-// Ingredientes
-console.log("- Ingredientes: setas, bacon, lechuga, tomate, cebolla, queso.");
 
-// Preparación
-console.log(
-"%c- Preparación: saltear las setas y el bacon hasta que estén dorados. Mezclar con lechuga troceada, tomate en cubos, cebolla en juliana y queso rallado. Aliñar con aceite de oliva y vinagre."
-,preparcionREceta);
+// Creo la interfaz de los grupos musicales
 
-// Ensalada de arándanos y pollo
-console.log("%cEnsalada de arándanos y pollo", estiloTitulo);
+interface GruposMusicales {
+    Nombre_del_grupo: String;
+    Cantante: String; 
+    Compositor: String;
+    Año_de_fundación: number;
+    Activo: boolean;
+    Género: String;
 
-// Ingredientes
-console.log(
-"- Ingredientes: arándanos, pollo cocido, lechuga, zanahoria, queso, nueces."
-);
+}
 
-// Preparación
-console.log(
-"%c- Preparación: mezclar los arándanos con el pollo cocido en cubos, lechuga troceada, zanahoria rallada, queso rallado y nueces picadas. Aliñar con una vinagreta de miel y mostaza."
-, preparcionREceta
-);
-// Ensalada de maíz y piña
-console.log("%cEnsalada de maíz y piña", estiloTitulo);
 
-// Ingredientes
-console.log(
-"- Ingredientes: maíz, piña en cubos, lechuga, pepino, cebolla, aguacate."
-);
+const The_beatles : GruposMusicales = {
 
-// Preparación
-console.log(
-"%c- Preparación: mezclar el maíz con la piña en cubos, lechuga troceada, pepino en rodajas, cebolla en juliana y aguacate en cubos. Aliñar con una vinagreta de aceite de oliva y vinagre."
-, preparcionREceta);
-// Ensalada de mango y queso feta
-console.log("%cEnsalada de mango y queso feta", estiloTitulo);
+    Nombre_del_grupo: "The beatles",
+    Cantante: "John Lennon", 
+    Compositor: "Lennon y McCartney",
+    Año_de_fundación: 1960,
+    Activo: false,
+    Género: "Pop Rock",
 
-// Ingredientes
-console.log(
-"- Ingredientes: mango en cubos, queso feta, lechuga, cebolla, pepino, aceitunas."
-);
-// Preparación
-console.log(
-"%c- Preparación: mezclar el mango en cubos con el queso feta desmenuzado, lechuga troceada, cebolla en juliana, pepino en rodajas y aceitunas. Aliñar con una vinagreta de limón y aceite de oliva."
-, preparcionREceta);
+}
+
+
+console.log(The_beatles);
