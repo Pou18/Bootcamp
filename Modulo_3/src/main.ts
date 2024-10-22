@@ -33,6 +33,15 @@ interface GruposMusicales {
 
 }
 
+// Creo las constantes 
+
+// La primera constante con las características definidas por el ejercicio
+
+const estiloTitulo = "color:green; font-size:20px; font-weight:bold";
+
+// Segunda constante de los grupos
+
+
 
 const The_beatles : GruposMusicales = {
 
@@ -45,5 +54,56 @@ const The_beatles : GruposMusicales = {
 
 }
 
+const Queen : GruposMusicales = {
 
-console.log(The_beatles);
+    Nombre_del_grupo: "Queen",
+    Cantante: "Freddie Mercury", 
+    Compositor: "Freddie Mercury",
+    Año_de_fundación: 1970,
+    Activo: false,
+    Género: "Rock",
+
+}
+
+
+const Acdc : GruposMusicales = {
+
+    Nombre_del_grupo: "AC/DC",
+    Cantante: "Brian Johnson", 
+    Compositor: "Brian Johnson",
+    Año_de_fundación: 1973,
+    Activo: true,
+    Género: "Hard Rock",
+
+}
+
+
+const Beethoven : GruposMusicales = {
+
+    Nombre_del_grupo: "Ludwig van Beethoven",
+    Cantante: "Ludwig van Beethoven", 
+    Compositor: "Ludwig van Beethoven",
+    Año_de_fundación: 1770,
+    Activo: false,
+    Género: "Clásica",
+
+}
+
+const Rolling : GruposMusicales = {
+
+    Nombre_del_grupo: "The Rolling Stones",
+    Cantante: "Mick Jagger", 
+    Compositor: "Mick Jagger y Keith Richards",
+    Año_de_fundación: 1973,
+    Activo: true,
+    Género: "Rock",
+
+}
+
+//Muestro por consola el resultado
+
+console.log("%cThe beatles 🎵", estiloTitulo , The_beatles);
+console.log("%cQueen 🎸", estiloTitulo , Queen);
+console.log("%cAC/DC 🤘", estiloTitulo , Acdc);
+console.log("%cLudwig van Beethoven 🎼", estiloTitulo , Beethoven);
+console.log("%cThe Rolling Stones 🎸", estiloTitulo , Rolling);
