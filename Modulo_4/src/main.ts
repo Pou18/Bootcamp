@@ -1,3 +1,11 @@
-import "./style.css";
+function rectangulo(base,altura) {
 
-console.log("Hello Typescript!");
+    return base * altura;
+
+}
+
+console.log(rectangulo(4,4));
+
+
+
+
